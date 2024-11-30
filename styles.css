@@ -1,0 +1,605 @@
+/* Fuente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fffbfe;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*Inicio */
+.inicio {
+  background-color: #ffc4cd; 
+  padding: 4rem 2rem; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  position: relative;
+  text-align: center;
+  border-radius: 20px; 
+  box-shadow: 0 4px 15px #d14c64; 
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.inicio .contenido-centrado {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.inicio .nombre {
+  font-size: 3.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.inicio .descripcion {
+  font-size: 1.5rem; 
+  margin-bottom: 1.5rem;
+}
+
+.inicio .botones a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: transparent; 
+  font-size: 1.1rem;
+  color: black; 
+  border: 2px solid #fa92b5; 
+  transition: color 0.3s ease, border-color 0.3s ease; 
+}
+
+.inicio .botones a:hover {
+  color: white; 
+  border-color: #f3719c; 
+}
+
+/* Estilo para el modo noche */
+body.noche {
+  background-color: #2c2c2c; 
+  color: #fff; 
+}
+
+body.noche .inicio {
+  background-color: #d07f8e; 
+}
+
+/* Botón de Modo Noche */
+.modo-noche {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  background-color: transparent; 
+  border: none;
+  font-size: 2rem; 
+  color: #333; 
+  padding: 0.5rem; 
+  border-radius: 50%; 
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.modo-noche:hover {
+  color: #fa92b5; 
+  transform: scale(1.1); 
+}
+
+/* Modo Noche */
+body.noche .modo-noche {
+  color: #fff; 
+}
+
+body.noche .modo-noche:hover {
+  color: #fa92b5; 
+}
+
+/* Botón de Idioma */
+.cambiar-idioma {
+  position: absolute;
+  top: 20px;
+  left: 120px; 
+  background-color: transparent; 
+  border: none;
+  font-size: 2rem; 
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.cambiar-idioma:hover {
+  color: #fa92b5; 
+  transform: scale(1.1); 
+}
+
+body.noche .cambiar-idioma {
+  color: #fff; 
+}
+
+body.noche .cambiar-idioma:hover {
+  color: #fa92b5; 
+}
+
+/* Redes sociales */
+.redes-sociales {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 1.2rem; 
+  z-index: 10; 
+}
+
+/* Estilo para los iconos de redes sociales */
+.icono {
+  background-color: transparent; 
+  color: #333; 
+  padding: 0.5rem; 
+  border-radius: 50%; 
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; 
+  font-size: 2rem; 
+}
+
+.icono:hover {
+  transform: scale(1.1); 
+  color: #954ee5; 
+}
+
+body.noche .redes-sociales .icono {
+  color: #fff; 
+}
+
+body.noche .redes-sociales .icono:hover {
+  color: #fa92b5;
+}
+
+
+/* Imagen */
+.inicio .imagen-principal img {
+  width: 200px;
+  height: 200px; 
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio .imagen-principal img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 15px #af2c44;
+}
+/* Sobre mí */
+.sobre-mi {
+  background-color: #fafafa;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 8px 15px #af2c44;
+}
+
+.sobre-mi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.sobre-mi p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+body.noche .sobre-mi {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+body.noche .sobre-mi h2 {
+  color: #fff;
+}
+
+body.noche .sobre-mi p {
+  color: #ccc;
+}
+
+/* Secciones  */
+.seccion {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.seccion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.seccion p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+/* Lenguajes de programacion */
+.seccion.lenguajes {
+  padding: 40px;
+  text-align: center;
+}
+
+.contenedor-lenguajes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;  
+  flex-wrap: wrap;
+  animation: moverIconos 8s ease-in-out infinite; 
+}
+
+
+@keyframes moverIconos {
+  0% {
+    transform: translateX(-100%); 
+  }
+  50% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
+.icono-lenguaje {
+  font-size: 60px; 
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.icono-lenguaje:hover {
+  transform: scale(1.2);  
+  color: #ff82f9;  
+}
+
+.icono-lenguaje i {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icono-lenguaje i:hover {
+  background-color: #fa92b5;
+  color: white;
+}
+
+/*  Proyectos */
+
+.titulo-proyectos {
+  font-size: 2.5rem; 
+  color: #333; 
+  text-align: center; 
+  width: 100%; 
+}
+
+.proyectos {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.proyectos {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 2rem;
+  margin-top: 2rem; 
+  flex-wrap: wrap; 
+  text-align: center; 
+}
+
+.proyecto {
+  width: 30%; 
+  background-color: #f1f1f1; 
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #af2c44;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+  margin: 1rem 0; 
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.proyecto:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 20px #371d94; 
+}
+
+.proyecto h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.proyecto p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.proyecto:hover h3 {
+  color: #fa92b5; 
+}
+
+.proyecto:hover p {
+  color: #333; 
+}
+
+body.noche .proyecto {
+  background-color: #444;
+  box-shadow: 0 4px 10px #af2c44;
+}
+
+body.noche .proyecto h3 {
+  color: #fff;
+}
+
+body.noche .proyecto p {
+  color: #ccc;
+}
+
+.proyecto {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+}
+
+.proyecto img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cuadro emergente */
+.detalle-proyecto {
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  width: 600px; 
+  height: auto; 
+  min-height: 200px; 
+  background-color: rgba(250, 217, 235, 0.842); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out; 
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.contenido-detalle {
+  background-color: #fff9fd;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(197, 51, 124, 0.637);
+  animation: scaleIn 0.5s ease-out; 
+}
+
+.detalle-proyecto img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease; 
+}
+
+.detalle-proyecto img:hover {
+  transform: scale(1.05); 
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); 
+    opacity: 1;
+  }
+}
+
+.cerrar {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #fa92b5; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-contacto {
+  flex: 1; 
+  padding: 1rem;
+}
+
+.info-contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-contacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.info-contacto li {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-contacto i {
+  color: #fa92b5; 
+  font-size: 1.5rem;
+}
+
+.formulario-contacto {
+  flex: 1;
+  background-color: #ffc4cd;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #af2c44;
+}
+
+.formulario-contacto h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-contacto form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fa92b5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto form button:hover {
+  background-color: rgb(216, 60, 133);
+}
+
+body.noche .contacto {
+  background-color: transparent; 
+}
+
+body.noche .info-contacto {
+  color: #f0f0f0; 
+}
+
+body.noche .info-contacto i {
+  color: #d07f8e; 
+}
+
+body.noche .formulario-contacto {
+  background-color: #444; 
+  box-shadow: 0 4px 10px #af2c44; 
+}
+
+body.noche .formulario-contacto h3 {
+  color: #fff; 
+}
+
+body.noche .formulario-contacto form input,
+body.noche .formulario-contacto form textarea {
+  background-color: #333; 
+  color: #f0f0f0;
+  border: 1px solid #555; 
+}
+
+body.noche .formulario-contacto form input::placeholder,
+body.noche .formulario-contacto form textarea::placeholder {
+  color: #aaa; 
+}
+
+body.noche .formulario-contacto form button {
+  background-color: #555; 
+  color: #fff; 
+}
+
+body.noche .formulario-contacto form button:hover {
+  background-color: #777; 
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

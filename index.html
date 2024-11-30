@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Wanda">
+  <title>Portafolio | Wanda</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+  <main>
+    <!-- Botón de Modo Noche -->
+    <button id="modo-noche" class="modo-noche" onclick="activarModoNoche()">🌙</button>
+    <!-- Botón de cambiar idioma -->
+    <button class="cambiar-idioma" onclick="toggleIdioma()">🌎</button>
+
+    <!-- Redes Sociales -->
+    <div class="redes-sociales">
+      <button class="icono" onclick="copiarLink('https://github.com/wandahernandez13')" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </button>
+      <button class="icono" onclick="copiarLink('https://www.instagram.com/wandaaa1238172')" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </button>
+      <button class="icono" onclick="copiarLink('https://www.linkedin.com/in/wandacarolina20')" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+    </div>
+
+    <!-- Inicio -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-centrado">
+        <h1 class="nombre">Hey, soy Wanda</h1>
+        <p class="descripcion">Soy una desarrolladora web en formación, comprometida con el aprendizaje continuo y la creación de soluciones digitales innovadoras.</p>
+        <div class="botones">
+          <a href="#proyectos" id="btn-ver-proyectos" class="btn btn-principal">Ver Proyectos</a>
+          <a href="#contacto" id="btn-contactame" class="btn btn-secundario">Contáctame</a>
+        </div>
+      </div>
+      <div class="imagen-principal">
+        <img src="pictures/me.jpg" alt="Foto Wanda">
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="seccion sobre-mi">
+      <h2>Sobre mí</h2>
+      <p> Tengo experiencia en el desarrollo de sitios web modernos utilizando HTML, CSS y JavaScript, y estoy ampliando mis conocimientos en tecnologías más avanzadas. Mi enfoque está en combinar diseño funcional con una experiencia de usuario atractiva. Estoy abierta a colaborar en proyectos que impulsen el crecimiento tecnológico y creativo.</p>
+    </section>
+
+    <section id="lenguajes" class="seccion lenguajes">
+      <div class="contenedor-lenguajes">
+        <div class="icono-lenguaje"><i class="fab fa-html5"></i></div>
+        <div class="icono-lenguaje"><i class="fab fa-css3-alt"></i></div>
+        <div class="icono-lenguaje"><i class="fab fa-js-square"></i></div>
+        <div class="icono-lenguaje"><i class="fab fa-python"></i></div>
+        <div class="icono-lenguaje"><i class="fab fa-java"></i></div>
+        <div class="icono-lenguaje"><i class="fas fa-cogs"></i></div> 
+      </div>
+    </section>
+    
+
+    <!-- Proyectos -->
+    <div class="seccion proyectos">
+      <h2 class="titulo-proyectos">Mis Proyectos</h2>
+      <div class="proyecto" onclick="mostrarDetalles('proyecto1')">
+        <img src="pictures/download (1).jpg" alt="Proyecto 1">
+        <h3>Recetario</h3>
+        <p>Sitio web temático de recetario estático utilizando HTML, CSS y JavaScript.</p>
+      </div>
+      <div class="proyecto" onclick="mostrarDetalles('proyecto2')">
+        <img src="pictures/download (2).jpg" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+        <p>Descripción del proyecto 2.</p>
+      </div>
+      <div class="proyecto" onclick="mostrarDetalles('proyecto3')">
+        <img src="pictures/download.jpg" alt="Proyecto 3">
+        <h3>Proyecto 3</h3>
+        <p>Descripción del proyecto 3.</p>
+      </div>
+    </div>
+
+    <!-- Cuadro de detalle del proyecto -->
+    <div id="detalle-proyecto" class="detalle-proyecto" style="display: none;">
+      <div class="contenido-detalle">
+        <button class="cerrar" onclick="cerrarDetalle()">X</button>
+        <h2 id="titulo-detalle">Proyecto 1</h2>
+        <p id="descripcion-detalle">Detalles completos sobre el Proyecto 1.</p>
+        <img id="imagen-detalle" src="" alt="Imagen Proyecto Detalle">
+      </div>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto" class="seccion contacto">
+      <div class="info-contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres colaborar? ¡Contáctame mediante cualquiera de estos medios!</p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> wandacarolina20@gmail.com</li>
+          <li><i class="fas fa-phone-alt"></i> +57 3054201015</li>
+          <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</li>
+        </ul>
+      </div>
+      <div class="formulario-contacto">
+        <h3>Enviame un mensaje🍰</h3>
+        <form>
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <textarea placeholder="Tu mensaje" required></textarea>
+          <button type="submit" class="btn btn-principal">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Wanda. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Función para copiar el enlace de redes sociales
+    function copiarLink(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('¡Enlace copiado al portapapeles!');
+      });
+    }
+
+    // Activar modo noche
+    function activarModoNoche() {
+      document.body.classList.toggle('noche');
+      const icono = document.getElementById('modo-noche');
+      icono.textContent = document.body.classList.contains('noche') ? '☀️' : '🌙';
+    }
+
+    // Texto en español e inglés
+    const textos = {
+      es: {
+        nombre: "¡Hey, soy Wanda!",
+        descripcion: "Soy una desarrolladora web en formación, comprometida con el aprendizaje continuo y la creación de soluciones digitales innovadoras.",
+        sobreMi: "Sobre mí",
+        descripcionSobreMi: "Tengo experiencia en el desarrollo de sitios web modernos utilizando HTML, CSS y JavaScript, y estoy ampliando mis conocimientos en tecnologías más avanzadas. Mi enfoque está en combinar diseño funcional con una experiencia de usuario atractiva. Estoy abierta a colaborar en proyectos que impulsen el crecimiento tecnológico y creativo.",
+        proyectos: "Proyectos Destacados",
+        contacto: "Contacto",
+        mensajeFormulario: "Enviame un mensaje🍰",
+        botonEnviar: "Enviar",
+        btnVerProyectos: "Ver Proyectos",
+        btnContactame: "Contáctame"
+      },
+      en: {
+        nombre: "Hey, I'm Wanda!",
+        descripcion: "I am a web developer in training, committed to continuous learning and the creation of innovative digital solutions.",
+        sobreMi: "About Me",
+        descripcionSobreMi: "I have experience developing modern websites using HTML, CSS, and JavaScript, and I'm expanding my knowledge in more advanced technologies. My focus is on combining functional design with an engaging user experience. I am open to collaborating on projects that promote technological and creative growth.",
+        proyectos: "Featured Projects",
+        contacto: "Contact",
+        mensajeFormulario: "Send me a message🍰",
+        botonEnviar: "Send",
+        btnVerProyectos: "View Projects",
+        btnContactame: "Contact Me"
+      }
+    };
+
+    // Variable para controlar el idioma actual
+    let idiomaActual = 'es';
+
+    // Función para cambiar el idioma
+    function toggleIdioma() {
+      idiomaActual = (idiomaActual === 'es') ? 'en' : 'es';
+      actualizarTexto();
+    }
+
+    // Función para actualizar los textos en la página
+    function actualizarTexto() {
+      document.querySelector('.nombre').textContent = textos[idiomaActual].nombre;
+      document.querySelector('.descripcion').textContent = textos[idiomaActual].descripcion;
+      document.querySelector('#sobre-mi h2').textContent = textos[idiomaActual].sobreMi;
+      document.querySelector('#sobre-mi p').textContent = textos[idiomaActual].descripcionSobreMi;
+      document.querySelector('#proyectos h2').textContent = textos[idiomaActual].proyectos;
+      document.querySelector('#contacto h2').textContent = textos[idiomaActual].contacto;
+      document.querySelector('.formulario-contacto h3').textContent = textos[idiomaActual].mensajeFormulario;
+      document.querySelector('.formulario-contacto button').textContent = textos[idiomaActual].botonEnviar;
+
+      // Actualizar botones
+      document.querySelector('#btn-ver-proyectos').textContent = textos[idiomaActual].btnVerProyectos;
+      document.querySelector('#btn-contactame').textContent = textos[idiomaActual].btnContactame;
+    }
+
+    // Función para mostrar los detalles del proyecto
+    function mostrarDetalles(proyecto) {
+      const detalles = {
+        proyecto1: {
+          titulo: "Recetario",
+          descripcion: "Sitio web temático de recetario estático utilizando HTML, CSS y JavaScript. Contiene 4 secciones; Página de INICIO(index.html), pagina que muestra las categorías de las distintas recetas(categorias.html), página por categoría(menu_categoria.html), y página de la receta detallada(detalles_receta.html).",
+          imagen: "pictures/download (1).jpg"
+        },
+        proyecto2: {
+          titulo: "Proyecto 2",
+          descripcion: "Descripción del proyecto 2.",
+          imagen: "pictures/download (2).jpg"
+        },
+        proyecto3: {
+          titulo: "Proyecto 3",
+          descripcion: "Descripción del proyecto 3.",
+          imagen: "pictures/download.jpg"
+        }
+      };
+
+      document.getElementById('titulo-detalle').textContent = detalles[proyecto].titulo;
+      document.getElementById('descripcion-detalle').textContent = detalles[proyecto].descripcion;
+      document.getElementById('imagen-detalle').src = detalles[proyecto].imagen;
+      document.getElementById('detalle-proyecto').style.display = 'block';
+    }
+
+    // Función para cerrar el cuadro de detalles
+    function cerrarDetalle() {
+      document.getElementById('detalle-proyecto').style.display = 'none';
+    }
+
+    // Ejecutar la función cuando la página cargue
+    window.addEventListener('DOMContentLoaded', actualizarTexto);
+  </script>
+</body>
+</html>
